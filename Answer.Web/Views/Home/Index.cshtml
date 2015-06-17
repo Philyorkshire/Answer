@@ -1,0 +1,42 @@
+﻿@using Answer.Domain
+@model IEnumerable<Answer.Domain.Person>
+
+<h2>People</h2>
+
+<div class="jumbotron">
+    <table style="width: 100%">
+        <thead>
+        <tr>
+            <td>Name</td>
+            <td>Palindrome</td>
+            <td>Authorised</td>
+            <td>Enabled</td>
+            <td>Colours</td>
+        </tr>
+        </thead>
+        <tbody>
+            @foreach (var person in Model)
+            {
+                <tr>
+                    <td><a href="@Url.Action("Edit", "Person", new { id = person.Id})">@person.FullName</a></td>
+                    <td>@person.IsPalindrome()</td>
+                    <td>@person.IsAuthorised</td>
+                    <td>@person.IsEnabled</td>
+                    <td>
+                        @{
+                            var lastColourItem = person.FavouriteColours.Last();
+                        }
+
+
+                        @foreach (var colour in person.FavouriteColours) {
+                            if (colour.Equals(lastColourItem))
+                            {<text> @colour.Name </text> }
+
+                            else { <text> @colour.Name, </text> }
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

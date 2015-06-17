@@ -1,0 +1,14 @@
+C:\Users\Phillip\Documents\GitHub\Answer\Answer.Data\bin\Debug\Answer.Data.dll.config
+C:\Users\Phillip\Documents\GitHub\Answer\Answer.Data\bin\Debug\Answer.Data.dll
+C:\Users\Phillip\Documents\GitHub\Answer\Answer.Data\bin\Debug\Answer.Data.pdb
+C:\Users\Phillip\Documents\GitHub\Answer\Answer.Data\bin\Debug\Answer.Domain.dll
+C:\Users\Phillip\Documents\GitHub\Answer\Answer.Data\bin\Debug\EntityFramework.dll
+C:\Users\Phillip\Documents\GitHub\Answer\Answer.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Phillip\Documents\GitHub\Answer\Answer.Data\bin\Debug\Answer.Domain.pdb
+C:\Users\Phillip\Documents\GitHub\Answer\Answer.Data\bin\Debug\EntityFramework.xml
+C:\Users\Phillip\Documents\GitHub\Answer\Answer.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Phillip\Documents\GitHub\Answer\Answer.Data\obj\Debug\Answer.Data.csprojResolveAssemblyReference.cache
+C:\Users\Phillip\Documents\GitHub\Answer\Answer.Data\obj\Debug\Answer.Data.dll
+C:\Users\Phillip\Documents\GitHub\Answer\Answer.Data\obj\Debug\Answer.Data.pdb
+C:\Users\Phillip\Documents\GitHub\Answer\Answer.Data\obj\Debug\Answer.Data.Migrations.Initial.resources
+C:\Users\Phillip\Documents\GitHub\Answer\Answer.Data\obj\Debug\Answer.Data.csproj.GenerateResource.Cache

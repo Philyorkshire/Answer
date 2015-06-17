@@ -1,0 +1,5 @@
+C:\Users\Phillip\Documents\GitHub\Answer\Answer.Domain\bin\Debug\Answer.Domain.dll
+C:\Users\Phillip\Documents\GitHub\Answer\Answer.Domain\bin\Debug\Answer.Domain.pdb
+C:\Users\Phillip\Documents\GitHub\Answer\Answer.Domain\obj\Debug\Answer.Domain.dll
+C:\Users\Phillip\Documents\GitHub\Answer\Answer.Domain\obj\Debug\Answer.Domain.pdb
+C:\Users\Phillip\Documents\GitHub\Answer\Answer.Domain\obj\Debug\Answer.Domain.csprojResolveAssemblyReference.cache

@@ -1,0 +1,16 @@
+C:\Users\Phillip\Documents\GitHub\Answer\Answer.Service\bin\Debug\Answer.Service.dll.config
+C:\Users\Phillip\Documents\GitHub\Answer\Answer.Service\bin\Debug\Answer.Service.dll
+C:\Users\Phillip\Documents\GitHub\Answer\Answer.Service\bin\Debug\Answer.Service.pdb
+C:\Users\Phillip\Documents\GitHub\Answer\Answer.Service\bin\Debug\Answer.Data.dll
+C:\Users\Phillip\Documents\GitHub\Answer\Answer.Service\bin\Debug\Answer.Domain.dll
+C:\Users\Phillip\Documents\GitHub\Answer\Answer.Service\bin\Debug\EntityFramework.dll
+C:\Users\Phillip\Documents\GitHub\Answer\Answer.Service\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Phillip\Documents\GitHub\Answer\Answer.Service\bin\Debug\Answer.Data.pdb
+C:\Users\Phillip\Documents\GitHub\Answer\Answer.Service\bin\Debug\Answer.Domain.pdb
+C:\Users\Phillip\Documents\GitHub\Answer\Answer.Service\bin\Debug\EntityFramework.xml
+C:\Users\Phillip\Documents\GitHub\Answer\Answer.Service\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Phillip\Documents\GitHub\Answer\Answer.Service\obj\Debug\Answer.Service.csprojResolveAssemblyReference.cache
+C:\Users\Phillip\Documents\GitHub\Answer\Answer.Service\obj\Debug\Answer.Service.dll
+C:\Users\Phillip\Documents\GitHub\Answer\Answer.Service\obj\Debug\Answer.Service.pdb
+C:\Users\Phillip\Documents\GitHub\Answer\Answer.Service\bin\Debug\Ninject.dll
+C:\Users\Phillip\Documents\GitHub\Answer\Answer.Service\bin\Debug\Ninject.xml
