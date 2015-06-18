@@ -21,7 +21,7 @@ namespace Answer.Web.Controllers
 
         public ActionResult Edit(int id)
         {
-            var person = _personService.GetOrCreate(id);
+            var person = _personService.GetById(id);
             var viewModel = Mapper.Map<PersonEditViewModel>(person);
 
             var colours = _colourService.GetAll();

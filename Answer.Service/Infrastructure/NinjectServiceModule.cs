@@ -1,4 +1,6 @@
-﻿using Ninject.Modules;
+﻿using Answer.Data;
+using Ninject.Modules;
+using Ninject.Web.Common;
 
 namespace Answer.Service.Infrastructure
 {
@@ -6,8 +8,9 @@ namespace Answer.Service.Infrastructure
     {
         public override void Load()
         {
-            Bind<IPersonService>().To<PersonService>();
-            Bind<IColourService>().To<ColourService>();
+            Bind<AnswerContext>().ToSelf().InRequestScope();
+            Bind<IPersonService>().To<PersonService>().InRequestScope();
+            Bind<IColourService>().To<ColourService>().InRequestScope();
         }
     }
 }

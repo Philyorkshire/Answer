@@ -19,9 +19,9 @@
             {
                 <tr>
                     <td><a href="@Url.Action("Edit", "Person", new { id = person.Id})">@person.FullName</a></td>
-                    <td>@person.IsPalindrome()</td>
-                    <td>@person.IsAuthorised</td>
-                    <td>@person.IsEnabled</td>
+                    <td class="bool">@person.IsPalindrome()</td>
+                    <td class="bool">@person.IsAuthorised</td>
+                    <td class="bool">@person.IsEnabled</td>
                     <td>
                         @{
                             var lastColourItem = person.FavouriteColours.Last();

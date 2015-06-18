@@ -1,4 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Data.Entity;
+using System.Data.Entity.Validation;
 
 using System.Linq;
 using Answer.Data;
@@ -6,35 +9,123 @@ using Answer.Domain.Base;
 
 namespace Answer.Service.Base
 {
-    public class EntityService<TEntity> : IEntityService<TEntity> where TEntity : Entity, new()
+    public class EntityService<T> : IEntityService<T> where T : Entity, new()
     {
         private readonly AnswerContext _context;
+        private IDbSet<T> _entities;
+        private string _errorMessage = string.Empty;
 
         public EntityService(AnswerContext context)
         {
             _context = context;
+        }
+
+        public T GetById(object id)
+        {
+            return Entities.Find(id);
+        }
+
+        public void Insert(T entity)
+        {
+            try
+            {
+                if (entity == null)
+                {
+                    throw new ArgumentNullException("entity");
+                }
+                this.Entities.Add(entity);
+                _context.SaveChanges();
+            }
+            catch (DbEntityValidationException dbEx)
+            {
+
+                foreach (var validationErrors in dbEx.EntityValidationErrors)
+                {
+                    foreach (var validationError in validationErrors.ValidationErrors)
+                    {
+                        _errorMessage += string.Format("Property: {0} Error: {1}",
+                        validationError.PropertyName, validationError.ErrorMessage) + Environment.NewLine;
+                    }
+                }
+                throw new Exception(_errorMessage, dbEx);
+            }
+        }
+
+        public void Update(T entity)
+        {
+            try
+            {
+                if (entity == null)
+                {
+                    throw new ArgumentNullException("entity");
+                }
+                _context.SaveChanges();
+            }
+            catch (DbEntityValidationException dbEx)
+            {
+                foreach (var validationErrors in dbEx.EntityValidationErrors)
+                {
+                    foreach (var validationError in validationErrors.ValidationErrors)
+                    {
+                        _errorMessage += Environment.NewLine + string.Format("Property: {0} Error: {1}",
+                        validationError.PropertyName, validationError.ErrorMessage);
+                    }
+                }
+
+                throw new Exception(_errorMessage, dbEx);
+            }
+        }
+
+        public void Delete(T entity)
+        {
+            try
+            {
+                if (entity == null)
+                {
+                    throw new ArgumentNullException("entity");
+                }
+
+                Entities.Remove(entity);
+                _context.SaveChanges();
+            }
+            catch (DbEntityValidationException dbEx)
+            {
+
+                foreach (var validationErrors in dbEx.EntityValidationErrors)
+                {
+                    foreach (var validationError in validationErrors.ValidationErrors)
+                    {
+                        _errorMessage += Environment.NewLine + string.Format("Property: {0} Error: {1}",
+                        validationError.PropertyName, validationError.ErrorMessage);
+                    }
+                }
+                throw new Exception(_errorMessage, dbEx);
+            }
+        }
+
+        public IEnumerable<T> GetAll()
+        {
+            return Entities;
         } 
 
-        public TEntity GetOrCreate(int? id)
+        public virtual IQueryable<T> Table
         {
-            var entity = _context.Set<TEntity>().Find(id);
-            return entity;
+            get
+            {
+                return this.Entities;
+            }
         }
 
-        public ICollection<TEntity> GetAll()
+        private IDbSet<T> Entities
         {
-            var entities = _context.Set<TEntity>();
-            return entities.ToList();
-        }
-
-        public TEntity AddOrUpdate(int? id, TEntity entity)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public void Delete(int id)
-        {
-            throw new System.NotImplementedException();
+            get
+            {
+                if (_entities == null)
+                {
+                    _entities = _context.Set<T>();
+                }
+                return _entities;
+            }
         }
     }
 }
