@@ -4,6 +4,11 @@ namespace Answer.Web.Models
 {
     public class PersonEditViewModel
     {
+        public PersonEditViewModel()
+        {
+            ColourItems = new List<ColourViewModel>();
+        }
+
         public int Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }

@@ -26,8 +26,8 @@ namespace Answer.Domain
 
         public bool IsPalindrome()
         {
-            var reversed = new string(FullName.Replace(" ", "").Reverse().ToArray());
-            return FullName.Replace(" ", "") == reversed;
+            var reversed = new string(FullName.Replace(" ", "").Reverse().ToArray()).ToLower();
+            return FullName.Replace(" ", "").ToLower() == reversed;
         }
     }
 }

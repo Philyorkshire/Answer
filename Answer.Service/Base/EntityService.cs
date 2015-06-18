@@ -21,7 +21,7 @@ namespace Answer.Service.Base
             return entity;
         }
 
-        public IEnumerable<TEntity> GetAll()
+        public ICollection<TEntity> GetAll()
         {
             var entities = _context.Set<TEntity>();
             return entities.ToList();

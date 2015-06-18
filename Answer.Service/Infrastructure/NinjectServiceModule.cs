@@ -7,6 +7,7 @@ namespace Answer.Service.Infrastructure
         public override void Load()
         {
             Bind<IPersonService>().To<PersonService>();
+            Bind<IColourService>().To<ColourService>();
         }
     }
 }

@@ -9,8 +9,8 @@ namespace Answer.Web.AutoMapperProfiles
     {
         protected override void Configure()
         {
-            Mapper.CreateMap<Person, PersonViewModel>();
-            Mapper.CreateMap<PersonViewModel, Person>();
+            Mapper.CreateMap<Person, PersonEditViewModel>();
+            Mapper.CreateMap<PersonEditViewModel, Person>();
         }
     }
 }

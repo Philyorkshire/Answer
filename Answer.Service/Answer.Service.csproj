@@ -51,6 +51,8 @@
   <ItemGroup>
     <Compile Include="Base\EntityService.cs" />
     <Compile Include="Base\IEntityService.cs" />
+    <Compile Include="ColourService.cs" />
+    <Compile Include="IColourService.cs" />
     <Compile Include="Infrastructure\NinjectServiceModule.cs" />
     <Compile Include="IPersonService.cs" />
     <Compile Include="PersonService.cs" />
